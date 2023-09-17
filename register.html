@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" style="--status-bar-height: 0px; --top-window-height: 0px; --window-left: 0px; --window-right: 0px; --window-margin: 0px; font-size: 22.1px; --window-top: calc(var(--top-window-height) + 0px); --window-bottom: 0px;">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" type="image/x-icon" href="https://www.catly.io/favicon.ico">
+      <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+      <title>Sign In</title>
+      <script src="./login_files/touch-emulator.js"></script><script>TouchEmulator();</script>
+      <style>::-webkit-scrollbar{
+         display: none;
+         }
+      </style>
+      <script>document.addEventListener('DOMContentLoaded', function() {
+         document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+         })
+      </script>
+      <link rel="stylesheet" href="./login_files/index.css">
+      <script async="" type="text/javascript" src="./login_files/tracking.js"></script>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-page-body{background:#0e2145}body{background:#0e2145}
+         /*每个页面公共css */.u-line-1{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:1;-webkit-box-orient:vertical!important}.u-line-2{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:2;-webkit-box-orient:vertical!important}.u-line-3{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:3;-webkit-box-orient:vertical!important}.u-line-4{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:4;-webkit-box-orient:vertical!important}.u-line-5{display:-webkit-box!important;overflow:hidden;text-overflow:ellipsis;word-break:break-all;-webkit-line-clamp:5;-webkit-box-orient:vertical!important}.u-border{border-width:.5px!important;border-color:#dadbde!important;border-style:solid}.u-border-top{border-top-width:.5px!important;border-color:#dadbde!important;border-top-style:solid}.u-border-left{border-left-width:.5px!important;border-color:#dadbde!important;border-left-style:solid}.u-border-right{border-right-width:.5px!important;border-color:#dadbde!important;border-right-style:solid}.u-border-bottom{border-bottom-width:.5px!important;border-color:#dadbde!important;border-bottom-style:solid}.u-border-top-bottom{border-top-width:.5px!important;border-bottom-width:.5px!important;border-color:#dadbde!important;border-top-style:solid;border-bottom-style:solid}.u-reset-button{padding:0;background-color:initial;font-size:inherit;line-height:inherit;color:inherit}.u-reset-button::after{border:none}.u-hover-class{opacity:.7}.u-primary-light{color:#ecf5ff}.u-warning-light{color:#fdf6ec}.u-success-light{color:#30c4ba}.u-error-light{color:#fef0f0}.u-info-light{color:#f4f4f5}.u-primary-light-bg{background-color:#ecf5ff}.u-warning-light-bg{background-color:#fdf6ec}.u-success-light-bg{background-color:#30c4ba}.u-error-light-bg{background-color:#fef0f0}.u-info-light-bg{background-color:#f4f4f5}.u-primary-dark{color:#398ade}.u-warning-dark{color:#f1a532}.u-success-dark{color:#30c4ba}.u-error-dark{color:#0e2145}.u-info-dark{color:#767a82}.u-primary-dark-bg{background-color:#398ade}.u-warning-dark-bg{background-color:#f1a532}.u-success-dark-bg{background-color:#30c4ba}.u-error-dark-bg{background-color:#0e2145}.u-info-dark-bg{background-color:#767a82}.u-primary-disabled{color:#9acafc}.u-warning-disabled{color:#f9d39b}.u-success-disabled{color:#a9e08f}.u-error-disabled{color:#0e2145}.u-info-disabled{color:#c4c6c9}.u-primary{color:#7231e3}.u-warning{color:#f9ae3d}.u-success{color:#30c4ba}.u-error{color:#0e2145}.u-info{color:#909399}.u-primary-bg{background-color:#7231e3}.u-warning-bg{background-color:#f9ae3d}.u-success-bg{background-color:#30c4ba}.u-error-bg{background-color:#0e2145}.u-info-bg{background-color:#909399}.u-main-color{color:#303133}.u-content-color{color:#606266}.u-tips-color{color:#909193}.u-light-color{color:#c0c4cc}.u-safe-area-inset-top{padding-top:0;padding-top:constant(safe-area-inset-top);padding-top:env(safe-area-inset-top)}.u-safe-area-inset-right{padding-right:0;padding-right:constant(safe-area-inset-right);padding-right:env(safe-area-inset-right)}.u-safe-area-inset-bottom{padding-bottom:0;padding-bottom:constant(safe-area-inset-bottom);padding-bottom:env(safe-area-inset-bottom)}.u-safe-area-inset-left{padding-left:0;padding-left:constant(safe-area-inset-left);padding-left:env(safe-area-inset-left)}uni-toast{z-index:10090}uni-toast .uni-toast{z-index:10090}::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}.u-block{padding:14px}.u-block__section{margin-bottom:10px}.u-block__title{margin-top:10px;font-size:15px;color:#606266;margin-bottom:10px}.u-block__flex{display:flex}.u-cell-icon{width:21px;height:21px;margin-right:4px}.u-page{padding:15px 15px 40px 15px}.u-demo-block{flex:1;margin-bottom:23px}.u-demo-block__content{display:flex;flex-direction:column}.u-demo-block__title{font-size:14px;color:#8f9ca2;margin-bottom:8px;display:flex;flex-direction:row}
+         /* ==================
+         布局
+         ==================== */
+         /*  -- flex弹性布局 -- */.flex{display:flex}.basis-xs{flex-basis:20%}.basis-sm{flex-basis:40%}.basis-df{flex-basis:50%}.basis-lg{flex-basis:60%}.basis-xl{flex-basis:80%}.flex-sub{flex:1}.flex-twice{flex:2}.flex-treble{flex:3}.flex-direction{flex-direction:column}.flex-wrap{flex-wrap:wrap}.align-start{align-items:flex-start}.align-end{align-items:flex-end}.align-center{align-items:center}.align-stretch{align-items:stretch}.self-start{align-self:flex-start}.self-center{align-self:flex-center}.self-end{align-self:flex-end}.self-stretch{align-self:stretch}.align-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.text-bold{font-weight:700}.text-center{text-align:center}.text-right{text-align:right}
+         /*  -- 内外边距 -- */.margin-0{margin:0}.margin-xs{margin:5px}.margin-sm{margin:11px}.margin{margin:17px}.margin-lg{margin:23px}.margin-xl{margin:29px}.margin-top-xs{margin-top:5px}.margin-top-sm{margin-top:11px}.margin-top{margin-top:17px}.margin-top-lg{margin-top:23px}.margin-top-xl{margin-top:29px}.margin-right-xs{margin-right:5px}.margin-right-sm{margin-right:11px}.margin-right{margin-right:17px}.margin-right-lg{margin-right:23px}.margin-right-xl{margin-right:29px}.margin-bottom-xs{margin-bottom:5px}.margin-bottom-sm{margin-bottom:11px}.margin-bottom{margin-bottom:17px}.margin-bottom-lg{margin-bottom:23px}.margin-bottom-xl{margin-bottom:29px}.margin-left-xs{margin-left:5px}.margin-left-sm{margin-left:11px}.margin-left{margin-left:17px}.margin-left-lg{margin-left:23px}.margin-left-xl{margin-left:29px}.margin-lr-xs{margin-left:5px;margin-right:5px}.margin-lr-sm{margin-left:11px;margin-right:11px}.margin-lr{margin-left:17px;margin-right:17px}.margin-lr-lg{margin-left:23px;margin-right:23px}.margin-lr-xl{margin-left:29px;margin-right:29px}.margin-tb-xs{margin-top:5px;margin-bottom:5px}.margin-tb-sm{margin-top:11px;margin-bottom:11px}.margin-tb{margin-top:17px;margin-bottom:17px}.margin-tb-lg{margin-top:23px;margin-bottom:23px}.margin-tb-xl{margin-top:29px;margin-bottom:29px}.padding-0{padding:0}.padding-xs{padding:5px}.padding-sm{padding:11px}.padding{padding:17px}.padding-lg{padding:23px}.padding-xl{padding:29px}.padding-top-xs{padding-top:5px}.padding-top-sm{padding-top:11px}.padding-top{padding-top:17px}.padding-top-lg{padding-top:23px}.padding-top-xl{padding-top:29px}.padding-right-xs{padding-right:5px}.padding-right-sm{padding-right:11px}.padding-right{padding-right:17px}.padding-right-lg{padding-right:23px}.padding-right-xl{padding-right:29px}.padding-bottom-xs{padding-bottom:5px}.padding-bottom-sm{padding-bottom:11px}.padding-bottom{padding-bottom:17px}.padding-bottom-lg{padding-bottom:23px}.padding-bottom-xl{padding-bottom:29px}.padding-left-xs{padding-left:5px}.padding-left-sm{padding-left:11px}.padding-left{padding-left:17px}.padding-left-lg{padding-left:23px}.padding-left-xl{padding-left:29px}.padding-lr-xs{padding-left:5px;padding-right:5px}.padding-lr-sm{padding-left:11px;padding-right:11px}.padding-lr{padding-left:17px;padding-right:17px}.padding-lr-lg{padding-left:23px;padding-right:23px}.padding-lr-xl{padding-left:29px;padding-right:29px}.padding-tb-xs{padding-top:5px;padding-bottom:5px}.padding-tb-sm{padding-top:11px;padding-bottom:11px}.padding-tb{padding-top:17px;padding-bottom:17px}.padding-tb-lg{padding-top:23px;padding-bottom:23px}.padding-tb-xl{padding-top:29px;padding-bottom:29px}@font-face{font-family:montserrat-light;src:url(./static/fonts/montserrat-light.10cfb8ad.ttf)}.m-light{font-family:montserrat-light}.m-medium{font-weight:700}.m-regular{font-weight:700}.m-semibold{font-weight:700}
+      </style>
+      <script charset="utf-8" src="./login_files/pages-cat.088f6a6b.js"></script>
+      <style type="text/css">.uni-app--showtabbar uni-page-wrapper {
+         display: block;
+         height: calc(100% - 50px);
+         height: calc(100% - 50px - constant(safe-area-inset-bottom));
+         height: calc(100% - 50px - env(safe-area-inset-bottom));
+         }
+         .uni-app--showtabbar uni-page-wrapper::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 50px;
+         height: calc(50px + constant(safe-area-inset-bottom));
+         height: calc(50px + env(safe-area-inset-bottom));
+         }
+         .uni-app--showtabbar uni-page-head[uni-page-head-type="default"] ~ uni-page-wrapper {
+         height: calc(100% - 44px - 50px);
+         height: calc(100% - 44px - constant(safe-area-inset-top) - 50px - constant(safe-area-inset-bottom));
+         height: calc(100% - 44px - env(safe-area-inset-top) - 50px - env(safe-area-inset-bottom));
+         }
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */.pages[data-v-25d4df1c]{background-color:#000;height:100vh;text-align:center;color:#fff;width:442px;overflow:hidden}.t1[data-v-25d4df1c]{position:relative;z-index:998;padding-top:53px;font-size:35px;font-weight:700}.t2[data-v-25d4df1c]{position:relative;z-index:998;font-size:21px;padding-top:17px}.calty-icon[data-v-25d4df1c]{background-image:url(./static/img/tokenicon.d098884c.png);width:315px;height:290px;background-repeat:no-repeat;background-size:100%;margin-left:auto;margin-right:auto;position:relative;z-index:998}.btn1[data-v-25d4df1c]{background-color:#5836d5;padding:18px;font-size:18px;width:70%;margin-left:auto;margin-right:auto;border-radius:58px}.btn2[data-v-25d4df1c]{background-color:#fff;color:#5836d5;padding:18px;width:70%;margin-left:auto;margin-right:auto;margin-top:17px;font-size:18px;border-radius:58px}.vortex[data-v-25d4df1c]{font-size:40px;top:40%;left:50%;position:relative;-webkit-transform:rotateX(60deg);transform:rotateX(60deg);-webkit-transform-style:preserve-3d;transform-style:preserve-3d;z-index:99}.ball[data-v-25d4df1c]{position:absolute;width:1em;height:1em;border-radius:50%;-webkit-transform-origin:bottom;transform-origin:bottom;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;background-image:radial-gradient(circle at top,hsl(var(--hue,0),100%,75%),hsl(var(--hue,0),100%,0%));-webkit-animation:dot-data-v-25d4df1c 60s var(--delay) infinite;animation:dot-data-v-25d4df1c 60s var(--delay) infinite}@-webkit-keyframes dot-data-v-25d4df1c{0%{-webkit-transform:translate(-50%,-50%) rotate(var(--angle)) translateX(10em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0);transform:translate(-50%,-50%) rotate(var(--angle)) translateX(10em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}80%{-webkit-transform:translate(-50%,-50%) rotate(var(--angle)) translateX(2em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(1);transform:translate(-50%,-50%) rotate(var(--angle)) translateX(2em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translate(-50%,-50%) rotate(var(--angle)) translateX(0) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0);transform:translate(-50%,-50%) rotate(var(--angle)) translateX(0) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0)}}@keyframes dot-data-v-25d4df1c{0%{-webkit-transform:translate(-50%,-50%) rotate(var(--angle)) translateX(10em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0);transform:translate(-50%,-50%) rotate(var(--angle)) translateX(10em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}80%{-webkit-transform:translate(-50%,-50%) rotate(var(--angle)) translateX(2em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(1);transform:translate(-50%,-50%) rotate(var(--angle)) translateX(2em) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translate(-50%,-50%) rotate(var(--angle)) translateX(0) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0);transform:translate(-50%,-50%) rotate(var(--angle)) translateX(0) rotate(calc(var(--angle) * -1)) rotateX(-60deg) scale(0)}}.ball[data-v-25d4df1c]:nth-child(1){--delay:0s;--angle:0deg;--hue:0}.ball[data-v-25d4df1c]:nth-child(2){--delay:-0.234375s;--angle:-84.375deg;--hue:-1.40625}.ball[data-v-25d4df1c]:nth-child(3){--delay:-0.46875s;--angle:-168.75deg;--hue:-2.8125}.ball[data-v-25d4df1c]:nth-child(4){--delay:-0.703125s;--angle:-253.125deg;--hue:-4.21875}.ball[data-v-25d4df1c]:nth-child(5){--delay:-0.9375s;--angle:-337.5deg;--hue:-5.625}.ball[data-v-25d4df1c]:nth-child(6){--delay:-1.171875s;--angle:-421.875deg;--hue:-7.03125}.ball[data-v-25d4df1c]:nth-child(7){--delay:-1.40625s;--angle:-506.25deg;--hue:-8.4375}.ball[data-v-25d4df1c]:nth-child(8){--delay:-1.640625s;--angle:-590.625deg;--hue:-9.84375}.ball[data-v-25d4df1c]:nth-child(9){--delay:-1.875s;--angle:-675deg;--hue:-11.25}.ball[data-v-25d4df1c]:nth-child(10){--delay:-2.109375s;--angle:-759.375deg;--hue:-12.65625}.ball[data-v-25d4df1c]:nth-child(11){--delay:-2.34375s;--angle:-843.75deg;--hue:-14.0625}.ball[data-v-25d4df1c]:nth-child(12){--delay:-2.578125s;--angle:-928.125deg;--hue:-15.46875}.ball[data-v-25d4df1c]:nth-child(13){--delay:-2.8125s;--angle:-1012.5deg;--hue:-16.875}.ball[data-v-25d4df1c]:nth-child(14){--delay:-3.046875s;--angle:-1096.875deg;--hue:-18.28125}.ball[data-v-25d4df1c]:nth-child(15){--delay:-3.28125s;--angle:-1181.25deg;--hue:-19.6875}.ball[data-v-25d4df1c]:nth-child(16){--delay:-3.515625s;--angle:-1265.625deg;--hue:-21.09375}.ball[data-v-25d4df1c]:nth-child(17){--delay:-3.75s;--angle:-1350deg;--hue:-22.5}.ball[data-v-25d4df1c]:nth-child(18){--delay:-3.984375s;--angle:-1434.375deg;--hue:-23.90625}.ball[data-v-25d4df1c]:nth-child(19){--delay:-4.21875s;--angle:-1518.75deg;--hue:-25.3125}.ball[data-v-25d4df1c]:nth-child(20){--delay:-4.453125s;--angle:-1603.125deg;--hue:-26.71875}.ball[data-v-25d4df1c]:nth-child(21){--delay:-4.6875s;--angle:-1687.5deg;--hue:-28.125}.ball[data-v-25d4df1c]:nth-child(22){--delay:-4.921875s;--angle:-1771.875deg;--hue:-29.53125}.ball[data-v-25d4df1c]:nth-child(23){--delay:-5.15625s;--angle:-1856.25deg;--hue:-30.9375}.ball[data-v-25d4df1c]:nth-child(24){--delay:-5.390625s;--angle:-1940.625deg;--hue:-32.34375}.ball[data-v-25d4df1c]:nth-child(25){--delay:-5.625s;--angle:-2025deg;--hue:-33.75}.ball[data-v-25d4df1c]:nth-child(26){--delay:-5.859375s;--angle:-2109.375deg;--hue:-35.15625}.ball[data-v-25d4df1c]:nth-child(27){--delay:-6.09375s;--angle:-2193.75deg;--hue:-36.5625}.ball[data-v-25d4df1c]:nth-child(28){--delay:-6.328125s;--angle:-2278.125deg;--hue:-37.96875}.ball[data-v-25d4df1c]:nth-child(29){--delay:-6.5625s;--angle:-2362.5deg;--hue:-39.375}.ball[data-v-25d4df1c]:nth-child(30){--delay:-6.796875s;--angle:-2446.875deg;--hue:-40.78125}.ball[data-v-25d4df1c]:nth-child(31){--delay:-7.03125s;--angle:-2531.25deg;--hue:-42.1875}.ball[data-v-25d4df1c]:nth-child(32){--delay:-7.265625s;--angle:-2615.625deg;--hue:-43.59375}.ball[data-v-25d4df1c]:nth-child(33){--delay:-7.5s;--angle:-2700deg;--hue:-45}.ball[data-v-25d4df1c]:nth-child(34){--delay:-7.734375s;--angle:-2784.375deg;--hue:-46.40625}.ball[data-v-25d4df1c]:nth-child(35){--delay:-7.96875s;--angle:-2868.75deg;--hue:-47.8125}.ball[data-v-25d4df1c]:nth-child(36){--delay:-8.203125s;--angle:-2953.125deg;--hue:-49.21875}.ball[data-v-25d4df1c]:nth-child(37){--delay:-8.4375s;--angle:-3037.5deg;--hue:-50.625}.ball[data-v-25d4df1c]:nth-child(38){--delay:-8.671875s;--angle:-3121.875deg;--hue:-52.03125}.ball[data-v-25d4df1c]:nth-child(39){--delay:-8.90625s;--angle:-3206.25deg;--hue:-53.4375}.ball[data-v-25d4df1c]:nth-child(40){--delay:-9.140625s;--angle:-3290.625deg;--hue:-54.84375}.ball[data-v-25d4df1c]:nth-child(41){--delay:-9.375s;--angle:-3375deg;--hue:-56.25}.ball[data-v-25d4df1c]:nth-child(42){--delay:-9.609375s;--angle:-3459.375deg;--hue:-57.65625}.ball[data-v-25d4df1c]:nth-child(43){--delay:-9.84375s;--angle:-3543.75deg;--hue:-59.0625}.ball[data-v-25d4df1c]:nth-child(44){--delay:-10.078125s;--angle:-3628.125deg;--hue:-60.46875}.ball[data-v-25d4df1c]:nth-child(45){--delay:-10.3125s;--angle:-3712.5deg;--hue:-61.875}.ball[data-v-25d4df1c]:nth-child(46){--delay:-10.546875s;--angle:-3796.875deg;--hue:-63.28125}.ball[data-v-25d4df1c]:nth-child(47){--delay:-10.78125s;--angle:-3881.25deg;--hue:-64.6875}.ball[data-v-25d4df1c]:nth-child(48){--delay:-11.015625s;--angle:-3965.625deg;--hue:-66.09375}.ball[data-v-25d4df1c]:nth-child(49){--delay:-11.25s;--angle:-4050deg;--hue:-67.5}.ball[data-v-25d4df1c]:nth-child(50){--delay:-11.484375s;--angle:-4134.375deg;--hue:-68.90625}.ball[data-v-25d4df1c]:nth-child(51){--delay:-11.71875s;--angle:-4218.75deg;--hue:-70.3125}.ball[data-v-25d4df1c]:nth-child(52){--delay:-11.953125s;--angle:-4303.125deg;--hue:-71.71875}.ball[data-v-25d4df1c]:nth-child(53){--delay:-12.1875s;--angle:-4387.5deg;--hue:-73.125}.ball[data-v-25d4df1c]:nth-child(54){--delay:-12.421875s;--angle:-4471.875deg;--hue:-74.53125}.ball[data-v-25d4df1c]:nth-child(55){--delay:-12.65625s;--angle:-4556.25deg;--hue:-75.9375}.ball[data-v-25d4df1c]:nth-child(56){--delay:-12.890625s;--angle:-4640.625deg;--hue:-77.34375}.ball[data-v-25d4df1c]:nth-child(57){--delay:-13.125s;--angle:-4725deg;--hue:-78.75}.ball[data-v-25d4df1c]:nth-child(58){--delay:-13.359375s;--angle:-4809.375deg;--hue:-80.15625}.ball[data-v-25d4df1c]:nth-child(59){--delay:-13.59375s;--angle:-4893.75deg;--hue:-81.5625}.ball[data-v-25d4df1c]:nth-child(60){--delay:-13.828125s;--angle:-4978.125deg;--hue:-82.96875}.ball[data-v-25d4df1c]:nth-child(61){--delay:-14.0625s;--angle:-5062.5deg;--hue:-84.375}.ball[data-v-25d4df1c]:nth-child(62){--delay:-14.296875s;--angle:-5146.875deg;--hue:-85.78125}.ball[data-v-25d4df1c]:nth-child(63){--delay:-14.53125s;--angle:-5231.25deg;--hue:-87.1875}.ball[data-v-25d4df1c]:nth-child(64){--delay:-14.765625s;--angle:-5315.625deg;--hue:-88.59375}.ball[data-v-25d4df1c]:nth-child(65){--delay:-15s;--angle:-5400deg;--hue:-90}.ball[data-v-25d4df1c]:nth-child(66){--delay:-15.234375s;--angle:-5484.375deg;--hue:-91.40625}.ball[data-v-25d4df1c]:nth-child(67){--delay:-15.46875s;--angle:-5568.75deg;--hue:-92.8125}.ball[data-v-25d4df1c]:nth-child(68){--delay:-15.703125s;--angle:-5653.125deg;--hue:-94.21875}.ball[data-v-25d4df1c]:nth-child(69){--delay:-15.9375s;--angle:-5737.5deg;--hue:-95.625}.ball[data-v-25d4df1c]:nth-child(70){--delay:-16.171875s;--angle:-5821.875deg;--hue:-97.03125}.ball[data-v-25d4df1c]:nth-child(71){--delay:-16.40625s;--angle:-5906.25deg;--hue:-98.4375}.ball[data-v-25d4df1c]:nth-child(72){--delay:-16.640625s;--angle:-5990.625deg;--hue:-99.84375}.ball[data-v-25d4df1c]:nth-child(73){--delay:-16.875s;--angle:-6075deg;--hue:-101.25}.ball[data-v-25d4df1c]:nth-child(74){--delay:-17.109375s;--angle:-6159.375deg;--hue:-102.65625}.ball[data-v-25d4df1c]:nth-child(75){--delay:-17.34375s;--angle:-6243.75deg;--hue:-104.0625}.ball[data-v-25d4df1c]:nth-child(76){--delay:-17.578125s;--angle:-6328.125deg;--hue:-105.46875}.ball[data-v-25d4df1c]:nth-child(77){--delay:-17.8125s;--angle:-6412.5deg;--hue:-106.875}.ball[data-v-25d4df1c]:nth-child(78){--delay:-18.046875s;--angle:-6496.875deg;--hue:-108.28125}.ball[data-v-25d4df1c]:nth-child(79){--delay:-18.28125s;--angle:-6581.25deg;--hue:-109.6875}.ball[data-v-25d4df1c]:nth-child(80){--delay:-18.515625s;--angle:-6665.625deg;--hue:-111.09375}.ball[data-v-25d4df1c]:nth-child(81){--delay:-18.75s;--angle:-6750deg;--hue:-112.5}.ball[data-v-25d4df1c]:nth-child(82){--delay:-18.984375s;--angle:-6834.375deg;--hue:-113.90625}.ball[data-v-25d4df1c]:nth-child(83){--delay:-19.21875s;--angle:-6918.75deg;--hue:-115.3125}.ball[data-v-25d4df1c]:nth-child(84){--delay:-19.453125s;--angle:-7003.125deg;--hue:-116.71875}.ball[data-v-25d4df1c]:nth-child(85){--delay:-19.6875s;--angle:-7087.5deg;--hue:-118.125}.ball[data-v-25d4df1c]:nth-child(86){--delay:-19.921875s;--angle:-7171.875deg;--hue:-119.53125}.ball[data-v-25d4df1c]:nth-child(87){--delay:-20.15625s;--angle:-7256.25deg;--hue:-120.9375}.ball[data-v-25d4df1c]:nth-child(88){--delay:-20.390625s;--angle:-7340.625deg;--hue:-122.34375}.ball[data-v-25d4df1c]:nth-child(89){--delay:-20.625s;--angle:-7425deg;--hue:-123.75}.ball[data-v-25d4df1c]:nth-child(90){--delay:-20.859375s;--angle:-7509.375deg;--hue:-125.15625}.ball[data-v-25d4df1c]:nth-child(91){--delay:-21.09375s;--angle:-7593.75deg;--hue:-126.5625}.ball[data-v-25d4df1c]:nth-child(92){--delay:-21.328125s;--angle:-7678.125deg;--hue:-127.96875}.ball[data-v-25d4df1c]:nth-child(93){--delay:-21.5625s;--angle:-7762.5deg;--hue:-129.375}.ball[data-v-25d4df1c]:nth-child(94){--delay:-21.796875s;--angle:-7846.875deg;--hue:-130.78125}.ball[data-v-25d4df1c]:nth-child(95){--delay:-22.03125s;--angle:-7931.25deg;--hue:-132.1875}.ball[data-v-25d4df1c]:nth-child(96){--delay:-22.265625s;--angle:-8015.625deg;--hue:-133.59375}.ball[data-v-25d4df1c]:nth-child(97){--delay:-22.5s;--angle:-8100deg;--hue:-135}.ball[data-v-25d4df1c]:nth-child(98){--delay:-22.734375s;--angle:-8184.375deg;--hue:-136.40625}.ball[data-v-25d4df1c]:nth-child(99){--delay:-22.96875s;--angle:-8268.75deg;--hue:-137.8125}.ball[data-v-25d4df1c]:nth-child(100){--delay:-23.203125s;--angle:-8353.125deg;--hue:-139.21875}.ball[data-v-25d4df1c]:nth-child(101){--delay:-23.4375s;--angle:-8437.5deg;--hue:-140.625}.ball[data-v-25d4df1c]:nth-child(102){--delay:-23.671875s;--angle:-8521.875deg;--hue:-142.03125}.ball[data-v-25d4df1c]:nth-child(103){--delay:-23.90625s;--angle:-8606.25deg;--hue:-143.4375}.ball[data-v-25d4df1c]:nth-child(104){--delay:-24.140625s;--angle:-8690.625deg;--hue:-144.84375}.ball[data-v-25d4df1c]:nth-child(105){--delay:-24.375s;--angle:-8775deg;--hue:-146.25}.ball[data-v-25d4df1c]:nth-child(106){--delay:-24.609375s;--angle:-8859.375deg;--hue:-147.65625}.ball[data-v-25d4df1c]:nth-child(107){--delay:-24.84375s;--angle:-8943.75deg;--hue:-149.0625}.ball[data-v-25d4df1c]:nth-child(108){--delay:-25.078125s;--angle:-9028.125deg;--hue:-150.46875}.ball[data-v-25d4df1c]:nth-child(109){--delay:-25.3125s;--angle:-9112.5deg;--hue:-151.875}.ball[data-v-25d4df1c]:nth-child(110){--delay:-25.546875s;--angle:-9196.875deg;--hue:-153.28125}.ball[data-v-25d4df1c]:nth-child(111){--delay:-25.78125s;--angle:-9281.25deg;--hue:-154.6875}.ball[data-v-25d4df1c]:nth-child(112){--delay:-26.015625s;--angle:-9365.625deg;--hue:-156.09375}.ball[data-v-25d4df1c]:nth-child(113){--delay:-26.25s;--angle:-9450deg;--hue:-157.5}.ball[data-v-25d4df1c]:nth-child(114){--delay:-26.484375s;--angle:-9534.375deg;--hue:-158.90625}.ball[data-v-25d4df1c]:nth-child(115){--delay:-26.71875s;--angle:-9618.75deg;--hue:-160.3125}.ball[data-v-25d4df1c]:nth-child(116){--delay:-26.953125s;--angle:-9703.125deg;--hue:-161.71875}.ball[data-v-25d4df1c]:nth-child(117){--delay:-27.1875s;--angle:-9787.5deg;--hue:-163.125}.ball[data-v-25d4df1c]:nth-child(118){--delay:-27.421875s;--angle:-9871.875deg;--hue:-164.53125}.ball[data-v-25d4df1c]:nth-child(119){--delay:-27.65625s;--angle:-9956.25deg;--hue:-165.9375}.ball[data-v-25d4df1c]:nth-child(120){--delay:-27.890625s;--angle:-10040.625deg;--hue:-167.34375}.ball[data-v-25d4df1c]:nth-child(121){--delay:-28.125s;--angle:-10125deg;--hue:-168.75}.ball[data-v-25d4df1c]:nth-child(122){--delay:-28.359375s;--angle:-10209.375deg;--hue:-170.15625}.ball[data-v-25d4df1c]:nth-child(123){--delay:-28.59375s;--angle:-10293.75deg;--hue:-171.5625}.ball[data-v-25d4df1c]:nth-child(124){--delay:-28.828125s;--angle:-10378.125deg;--hue:-172.96875}.ball[data-v-25d4df1c]:nth-child(125){--delay:-29.0625s;--angle:-10462.5deg;--hue:-174.375}.ball[data-v-25d4df1c]:nth-child(126){--delay:-29.296875s;--angle:-10546.875deg;--hue:-175.78125}.ball[data-v-25d4df1c]:nth-child(127){--delay:-29.53125s;--angle:-10631.25deg;--hue:-177.1875}.ball[data-v-25d4df1c]:nth-child(128){--delay:-29.765625s;--angle:-10715.625deg;--hue:-178.59375}.ball[data-v-25d4df1c]:nth-child(129){--delay:-30s;--angle:-10800deg;--hue:-180}.ball[data-v-25d4df1c]:nth-child(130){--delay:-30.234375s;--angle:-10884.375deg;--hue:-181.40625}.ball[data-v-25d4df1c]:nth-child(131){--delay:-30.46875s;--angle:-10968.75deg;--hue:-182.8125}.ball[data-v-25d4df1c]:nth-child(132){--delay:-30.703125s;--angle:-11053.125deg;--hue:-184.21875}.ball[data-v-25d4df1c]:nth-child(133){--delay:-30.9375s;--angle:-11137.5deg;--hue:-185.625}.ball[data-v-25d4df1c]:nth-child(134){--delay:-31.171875s;--angle:-11221.875deg;--hue:-187.03125}.ball[data-v-25d4df1c]:nth-child(135){--delay:-31.40625s;--angle:-11306.25deg;--hue:-188.4375}.ball[data-v-25d4df1c]:nth-child(136){--delay:-31.640625s;--angle:-11390.625deg;--hue:-189.84375}.ball[data-v-25d4df1c]:nth-child(137){--delay:-31.875s;--angle:-11475deg;--hue:-191.25}.ball[data-v-25d4df1c]:nth-child(138){--delay:-32.109375s;--angle:-11559.375deg;--hue:-192.65625}.ball[data-v-25d4df1c]:nth-child(139){--delay:-32.34375s;--angle:-11643.75deg;--hue:-194.0625}.ball[data-v-25d4df1c]:nth-child(140){--delay:-32.578125s;--angle:-11728.125deg;--hue:-195.46875}.ball[data-v-25d4df1c]:nth-child(141){--delay:-32.8125s;--angle:-11812.5deg;--hue:-196.875}.ball[data-v-25d4df1c]:nth-child(142){--delay:-33.046875s;--angle:-11896.875deg;--hue:-198.28125}.ball[data-v-25d4df1c]:nth-child(143){--delay:-33.28125s;--angle:-11981.25deg;--hue:-199.6875}.ball[data-v-25d4df1c]:nth-child(144){--delay:-33.515625s;--angle:-12065.625deg;--hue:-201.09375}.ball[data-v-25d4df1c]:nth-child(145){--delay:-33.75s;--angle:-12150deg;--hue:-202.5}.ball[data-v-25d4df1c]:nth-child(146){--delay:-33.984375s;--angle:-12234.375deg;--hue:-203.90625}.ball[data-v-25d4df1c]:nth-child(147){--delay:-34.21875s;--angle:-12318.75deg;--hue:-205.3125}.ball[data-v-25d4df1c]:nth-child(148){--delay:-34.453125s;--angle:-12403.125deg;--hue:-206.71875}.ball[data-v-25d4df1c]:nth-child(149){--delay:-34.6875s;--angle:-12487.5deg;--hue:-208.125}.ball[data-v-25d4df1c]:nth-child(150){--delay:-34.921875s;--angle:-12571.875deg;--hue:-209.53125}.ball[data-v-25d4df1c]:nth-child(151){--delay:-35.15625s;--angle:-12656.25deg;--hue:-210.9375}.ball[data-v-25d4df1c]:nth-child(152){--delay:-35.390625s;--angle:-12740.625deg;--hue:-212.34375}.ball[data-v-25d4df1c]:nth-child(153){--delay:-35.625s;--angle:-12825deg;--hue:-213.75}.ball[data-v-25d4df1c]:nth-child(154){--delay:-35.859375s;--angle:-12909.375deg;--hue:-215.15625}.ball[data-v-25d4df1c]:nth-child(155){--delay:-36.09375s;--angle:-12993.75deg;--hue:-216.5625}.ball[data-v-25d4df1c]:nth-child(156){--delay:-36.328125s;--angle:-13078.125deg;--hue:-217.96875}.ball[data-v-25d4df1c]:nth-child(157){--delay:-36.5625s;--angle:-13162.5deg;--hue:-219.375}.ball[data-v-25d4df1c]:nth-child(158){--delay:-36.796875s;--angle:-13246.875deg;--hue:-220.78125}.ball[data-v-25d4df1c]:nth-child(159){--delay:-37.03125s;--angle:-13331.25deg;--hue:-222.1875}.ball[data-v-25d4df1c]:nth-child(160){--delay:-37.265625s;--angle:-13415.625deg;--hue:-223.59375}.ball[data-v-25d4df1c]:nth-child(161){--delay:-37.5s;--angle:-13500deg;--hue:-225}.ball[data-v-25d4df1c]:nth-child(162){--delay:-37.734375s;--angle:-13584.375deg;--hue:-226.40625}.ball[data-v-25d4df1c]:nth-child(163){--delay:-37.96875s;--angle:-13668.75deg;--hue:-227.8125}.ball[data-v-25d4df1c]:nth-child(164){--delay:-38.203125s;--angle:-13753.125deg;--hue:-229.21875}.ball[data-v-25d4df1c]:nth-child(165){--delay:-38.4375s;--angle:-13837.5deg;--hue:-230.625}.ball[data-v-25d4df1c]:nth-child(166){--delay:-38.671875s;--angle:-13921.875deg;--hue:-232.03125}.ball[data-v-25d4df1c]:nth-child(167){--delay:-38.90625s;--angle:-14006.25deg;--hue:-233.4375}.ball[data-v-25d4df1c]:nth-child(168){--delay:-39.140625s;--angle:-14090.625deg;--hue:-234.84375}.ball[data-v-25d4df1c]:nth-child(169){--delay:-39.375s;--angle:-14175deg;--hue:-236.25}.ball[data-v-25d4df1c]:nth-child(170){--delay:-39.609375s;--angle:-14259.375deg;--hue:-237.65625}.ball[data-v-25d4df1c]:nth-child(171){--delay:-39.84375s;--angle:-14343.75deg;--hue:-239.0625}.ball[data-v-25d4df1c]:nth-child(172){--delay:-40.078125s;--angle:-14428.125deg;--hue:-240.46875}.ball[data-v-25d4df1c]:nth-child(173){--delay:-40.3125s;--angle:-14512.5deg;--hue:-241.875}.ball[data-v-25d4df1c]:nth-child(174){--delay:-40.546875s;--angle:-14596.875deg;--hue:-243.28125}.ball[data-v-25d4df1c]:nth-child(175){--delay:-40.78125s;--angle:-14681.25deg;--hue:-244.6875}.ball[data-v-25d4df1c]:nth-child(176){--delay:-41.015625s;--angle:-14765.625deg;--hue:-246.09375}.ball[data-v-25d4df1c]:nth-child(177){--delay:-41.25s;--angle:-14850deg;--hue:-247.5}.ball[data-v-25d4df1c]:nth-child(178){--delay:-41.484375s;--angle:-14934.375deg;--hue:-248.90625}.ball[data-v-25d4df1c]:nth-child(179){--delay:-41.71875s;--angle:-15018.75deg;--hue:-250.3125}.ball[data-v-25d4df1c]:nth-child(180){--delay:-41.953125s;--angle:-15103.125deg;--hue:-251.71875}.ball[data-v-25d4df1c]:nth-child(181){--delay:-42.1875s;--angle:-15187.5deg;--hue:-253.125}.ball[data-v-25d4df1c]:nth-child(182){--delay:-42.421875s;--angle:-15271.875deg;--hue:-254.53125}.ball[data-v-25d4df1c]:nth-child(183){--delay:-42.65625s;--angle:-15356.25deg;--hue:-255.9375}.ball[data-v-25d4df1c]:nth-child(184){--delay:-42.890625s;--angle:-15440.625deg;--hue:-257.34375}.ball[data-v-25d4df1c]:nth-child(185){--delay:-43.125s;--angle:-15525deg;--hue:-258.75}.ball[data-v-25d4df1c]:nth-child(186){--delay:-43.359375s;--angle:-15609.375deg;--hue:-260.15625}.ball[data-v-25d4df1c]:nth-child(187){--delay:-43.59375s;--angle:-15693.75deg;--hue:-261.5625}.ball[data-v-25d4df1c]:nth-child(188){--delay:-43.828125s;--angle:-15778.125deg;--hue:-262.96875}.ball[data-v-25d4df1c]:nth-child(189){--delay:-44.0625s;--angle:-15862.5deg;--hue:-264.375}.ball[data-v-25d4df1c]:nth-child(190){--delay:-44.296875s;--angle:-15946.875deg;--hue:-265.78125}.ball[data-v-25d4df1c]:nth-child(191){--delay:-44.53125s;--angle:-16031.25deg;--hue:-267.1875}.ball[data-v-25d4df1c]:nth-child(192){--delay:-44.765625s;--angle:-16115.625deg;--hue:-268.59375}.ball[data-v-25d4df1c]:nth-child(193){--delay:-45s;--angle:-16200deg;--hue:-270}.ball[data-v-25d4df1c]:nth-child(194){--delay:-45.234375s;--angle:-16284.375deg;--hue:-271.40625}.ball[data-v-25d4df1c]:nth-child(195){--delay:-45.46875s;--angle:-16368.75deg;--hue:-272.8125}.ball[data-v-25d4df1c]:nth-child(196){--delay:-45.703125s;--angle:-16453.125deg;--hue:-274.21875}.ball[data-v-25d4df1c]:nth-child(197){--delay:-45.9375s;--angle:-16537.5deg;--hue:-275.625}.ball[data-v-25d4df1c]:nth-child(198){--delay:-46.171875s;--angle:-16621.875deg;--hue:-277.03125}.ball[data-v-25d4df1c]:nth-child(199){--delay:-46.40625s;--angle:-16706.25deg;--hue:-278.4375}.ball[data-v-25d4df1c]:nth-child(200){--delay:-46.640625s;--angle:-16790.625deg;--hue:-279.84375}.ball[data-v-25d4df1c]:nth-child(201){--delay:-46.875s;--angle:-16875deg;--hue:-281.25}.ball[data-v-25d4df1c]:nth-child(202){--delay:-47.109375s;--angle:-16959.375deg;--hue:-282.65625}.ball[data-v-25d4df1c]:nth-child(203){--delay:-47.34375s;--angle:-17043.75deg;--hue:-284.0625}.ball[data-v-25d4df1c]:nth-child(204){--delay:-47.578125s;--angle:-17128.125deg;--hue:-285.46875}.ball[data-v-25d4df1c]:nth-child(205){--delay:-47.8125s;--angle:-17212.5deg;--hue:-286.875}.ball[data-v-25d4df1c]:nth-child(206){--delay:-48.046875s;--angle:-17296.875deg;--hue:-288.28125}.ball[data-v-25d4df1c]:nth-child(207){--delay:-48.28125s;--angle:-17381.25deg;--hue:-289.6875}.ball[data-v-25d4df1c]:nth-child(208){--delay:-48.515625s;--angle:-17465.625deg;--hue:-291.09375}.ball[data-v-25d4df1c]:nth-child(209){--delay:-48.75s;--angle:-17550deg;--hue:-292.5}.ball[data-v-25d4df1c]:nth-child(210){--delay:-48.984375s;--angle:-17634.375deg;--hue:-293.90625}.ball[data-v-25d4df1c]:nth-child(211){--delay:-49.21875s;--angle:-17718.75deg;--hue:-295.3125}.ball[data-v-25d4df1c]:nth-child(212){--delay:-49.453125s;--angle:-17803.125deg;--hue:-296.71875}.ball[data-v-25d4df1c]:nth-child(213){--delay:-49.6875s;--angle:-17887.5deg;--hue:-298.125}.ball[data-v-25d4df1c]:nth-child(214){--delay:-49.921875s;--angle:-17971.875deg;--hue:-299.53125}.ball[data-v-25d4df1c]:nth-child(215){--delay:-50.15625s;--angle:-18056.25deg;--hue:-300.9375}.ball[data-v-25d4df1c]:nth-child(216){--delay:-50.390625s;--angle:-18140.625deg;--hue:-302.34375}.ball[data-v-25d4df1c]:nth-child(217){--delay:-50.625s;--angle:-18225deg;--hue:-303.75}.ball[data-v-25d4df1c]:nth-child(218){--delay:-50.859375s;--angle:-18309.375deg;--hue:-305.15625}.ball[data-v-25d4df1c]:nth-child(219){--delay:-51.09375s;--angle:-18393.75deg;--hue:-306.5625}.ball[data-v-25d4df1c]:nth-child(220){--delay:-51.328125s;--angle:-18478.125deg;--hue:-307.96875}.ball[data-v-25d4df1c]:nth-child(221){--delay:-51.5625s;--angle:-18562.5deg;--hue:-309.375}.ball[data-v-25d4df1c]:nth-child(222){--delay:-51.796875s;--angle:-18646.875deg;--hue:-310.78125}.ball[data-v-25d4df1c]:nth-child(223){--delay:-52.03125s;--angle:-18731.25deg;--hue:-312.1875}.ball[data-v-25d4df1c]:nth-child(224){--delay:-52.265625s;--angle:-18815.625deg;--hue:-313.59375}.ball[data-v-25d4df1c]:nth-child(225){--delay:-52.5s;--angle:-18900deg;--hue:-315}.ball[data-v-25d4df1c]:nth-child(226){--delay:-52.734375s;--angle:-18984.375deg;--hue:-316.40625}.ball[data-v-25d4df1c]:nth-child(227){--delay:-52.96875s;--angle:-19068.75deg;--hue:-317.8125}.ball[data-v-25d4df1c]:nth-child(228){--delay:-53.203125s;--angle:-19153.125deg;--hue:-319.21875}.ball[data-v-25d4df1c]:nth-child(229){--delay:-53.4375s;--angle:-19237.5deg;--hue:-320.625}.ball[data-v-25d4df1c]:nth-child(230){--delay:-53.671875s;--angle:-19321.875deg;--hue:-322.03125}.ball[data-v-25d4df1c]:nth-child(231){--delay:-53.90625s;--angle:-19406.25deg;--hue:-323.4375}.ball[data-v-25d4df1c]:nth-child(232){--delay:-54.140625s;--angle:-19490.625deg;--hue:-324.84375}.ball[data-v-25d4df1c]:nth-child(233){--delay:-54.375s;--angle:-19575deg;--hue:-326.25}.ball[data-v-25d4df1c]:nth-child(234){--delay:-54.609375s;--angle:-19659.375deg;--hue:-327.65625}.ball[data-v-25d4df1c]:nth-child(235){--delay:-54.84375s;--angle:-19743.75deg;--hue:-329.0625}.ball[data-v-25d4df1c]:nth-child(236){--delay:-55.078125s;--angle:-19828.125deg;--hue:-330.46875}.ball[data-v-25d4df1c]:nth-child(237){--delay:-55.3125s;--angle:-19912.5deg;--hue:-331.875}.ball[data-v-25d4df1c]:nth-child(238){--delay:-55.546875s;--angle:-19996.875deg;--hue:-333.28125}.ball[data-v-25d4df1c]:nth-child(239){--delay:-55.78125s;--angle:-20081.25deg;--hue:-334.6875}.ball[data-v-25d4df1c]:nth-child(240){--delay:-56.015625s;--angle:-20165.625deg;--hue:-336.09375}.ball[data-v-25d4df1c]:nth-child(241){--delay:-56.25s;--angle:-20250deg;--hue:-337.5}.ball[data-v-25d4df1c]:nth-child(242){--delay:-56.484375s;--angle:-20334.375deg;--hue:-338.90625}.ball[data-v-25d4df1c]:nth-child(243){--delay:-56.71875s;--angle:-20418.75deg;--hue:-340.3125}.ball[data-v-25d4df1c]:nth-child(244){--delay:-56.953125s;--angle:-20503.125deg;--hue:-341.71875}.ball[data-v-25d4df1c]:nth-child(245){--delay:-57.1875s;--angle:-20587.5deg;--hue:-343.125}.ball[data-v-25d4df1c]:nth-child(246){--delay:-57.421875s;--angle:-20671.875deg;--hue:-344.53125}.ball[data-v-25d4df1c]:nth-child(247){--delay:-57.65625s;--angle:-20756.25deg;--hue:-345.9375}.ball[data-v-25d4df1c]:nth-child(248){--delay:-57.890625s;--angle:-20840.625deg;--hue:-347.34375}.ball[data-v-25d4df1c]:nth-child(249){--delay:-58.125s;--angle:-20925deg;--hue:-348.75}.ball[data-v-25d4df1c]:nth-child(250){--delay:-58.359375s;--angle:-21009.375deg;--hue:-350.15625}.ball[data-v-25d4df1c]:nth-child(251){--delay:-58.59375s;--angle:-21093.75deg;--hue:-351.5625}.ball[data-v-25d4df1c]:nth-child(252){--delay:-58.828125s;--angle:-21178.125deg;--hue:-352.96875}.ball[data-v-25d4df1c]:nth-child(253){--delay:-59.0625s;--angle:-21262.5deg;--hue:-354.375}.ball[data-v-25d4df1c]:nth-child(254){--delay:-59.296875s;--angle:-21346.875deg;--hue:-355.78125}.ball[data-v-25d4df1c]:nth-child(255){--delay:-59.53125s;--angle:-21431.25deg;--hue:-357.1875}.ball[data-v-25d4df1c]:nth-child(256){--delay:-59.765625s;--angle:-21515.625deg;--hue:-358.59375}
+      </style>
+      <script charset="utf-8" src="./login_files/pages-fp~pages-fp2~pages-h~pages-index-buy~pages-index-index~pages-l~pages-my-affiliate~pages-my-cou~cd203250.4fb5e5d0.js"></script><script charset="utf-8" src="./login_files/pages-ads-ads~pages-fp~pages-fp2~pages-h~pages-index-buy~pages-index-index~pages-l~pages-my-affiliat~bfa779e1.64d03d5e.js"></script><script charset="utf-8" src="./login_files/pages-fp~pages-fp2~pages-h~pages-index-stake~pages-l~pages-my-affiliate~pages-r~pages-success-succes~0452e5cb.fa1bbc75.js"></script><script charset="utf-8" src="./login_files/pages-fp~pages-fp2~pages-h~pages-index-buy~pages-index-index~pages-l~pages-my-affiliate~pages-my-my~~03fb78f8.afebbb62.js"></script><script charset="utf-8" src="./login_files/pages-l.cf4975cd.js"></script>
+      <style type="text/css">.uni-app--showtabbar uni-page-wrapper {
+         display: block;
+         height: calc(100% - 50px);
+         height: calc(100% - 50px - constant(safe-area-inset-bottom));
+         height: calc(100% - 50px - env(safe-area-inset-bottom));
+         }
+         .uni-app--showtabbar uni-page-wrapper::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 50px;
+         height: calc(50px + constant(safe-area-inset-bottom));
+         height: calc(50px + env(safe-area-inset-bottom));
+         }
+         .uni-app--showtabbar uni-page-head[uni-page-head-type="default"] ~ uni-page-wrapper {
+         height: calc(100% - 44px - 50px);
+         height: calc(100% - 44px - constant(safe-area-inset-top) - 50px - constant(safe-area-inset-bottom));
+         height: calc(100% - 44px - env(safe-area-inset-top) - 50px - env(safe-area-inset-bottom));
+         }
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */.u-status-bar[data-v-186edb96]{width:100%}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-59765974], uni-scroll-view[data-v-59765974], uni-swiper-item[data-v-59765974]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}@font-face{font-family:uicon-iconfont;src:url(https://at.alicdn.com/t/font_2225171_8kdcwk4po24.ttf) format("truetype")}.u-icon[data-v-59765974]{display:flex;align-items:center}.u-icon--left[data-v-59765974]{flex-direction:row-reverse;align-items:center}.u-icon--right[data-v-59765974]{flex-direction:row;align-items:center}.u-icon--top[data-v-59765974]{flex-direction:column-reverse;justify-content:center}.u-icon--bottom[data-v-59765974]{flex-direction:column;justify-content:center}.u-icon__icon[data-v-59765974]{font-family:uicon-iconfont;position:relative;display:flex;flex-direction:row;align-items:center}.u-icon__icon--primary[data-v-59765974]{color:#7231e3}.u-icon__icon--success[data-v-59765974]{color:#30c4ba}.u-icon__icon--error[data-v-59765974]{color:#0e2145}.u-icon__icon--warning[data-v-59765974]{color:#f9ae3d}.u-icon__icon--info[data-v-59765974]{color:#909399}.u-icon__img[data-v-59765974]{height:auto;will-change:transform}.u-icon__label[data-v-59765974]{line-height:1}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-5302c461], uni-scroll-view[data-v-5302c461], uni-swiper-item[data-v-5302c461]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-navbar--fixed[data-v-5302c461]{position:fixed;left:0;right:0;top:0;z-index:11}.u-navbar__content[data-v-5302c461]{display:flex;flex-direction:row;align-items:center;height:44px;background-color:#9acafc;position:relative;justify-content:center}.u-navbar__content__left[data-v-5302c461], .u-navbar__content__right[data-v-5302c461]{padding:0 13px;position:absolute;top:0;bottom:0;display:flex;flex-direction:row;align-items:center}.u-navbar__content__left[data-v-5302c461]{left:0}.u-navbar__content__left--hover[data-v-5302c461]{opacity:.7}.u-navbar__content__left__text[data-v-5302c461]{font-size:15px;margin-left:3px}.u-navbar__content__title[data-v-5302c461]{text-align:center;font-size:16px;color:#303133}.u-navbar__content__right[data-v-5302c461]{right:0}.u-navbar__content__right__text[data-v-5302c461]{font-size:15px;margin-left:3px}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-2f0e5305], uni-scroll-view[data-v-2f0e5305], uni-swiper-item[data-v-2f0e5305]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-line[data-v-2f0e5305]{vertical-align:middle}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-e1c67d6a], uni-scroll-view[data-v-e1c67d6a], uni-swiper-item[data-v-e1c67d6a]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-form-item[data-v-e1c67d6a]{display:flex;flex-direction:column;font-size:14px;color:#303133}.u-form-item__body[data-v-e1c67d6a]{display:flex;flex-direction:row;padding:10px 0}.u-form-item__body__left[data-v-e1c67d6a]{display:flex;flex-direction:row;align-items:center}.u-form-item__body__left__content[data-v-e1c67d6a]{position:relative;display:flex;flex-direction:row;align-items:center;padding-right:5px;flex:1}.u-form-item__body__left__content__icon[data-v-e1c67d6a]{margin-right:4px}.u-form-item__body__left__content__required[data-v-e1c67d6a]{position:absolute;left:-9px;color:#0e2145;line-height:20px;font-size:20px;top:3px}.u-form-item__body__left__content__label[data-v-e1c67d6a]{display:flex;flex-direction:row;align-items:center;flex:1;color:#303133;font-size:15px}.u-form-item__body__right[data-v-e1c67d6a]{flex:1}.u-form-item__body__right__content[data-v-e1c67d6a]{display:flex;flex-direction:row;align-items:center;flex:1}.u-form-item__body__right__content__slot[data-v-e1c67d6a]{flex:1;display:flex;flex-direction:row;align-items:center}.u-form-item__body__right__content__icon[data-v-e1c67d6a]{margin-left:5px;color:#c0c4cc;font-size:17px}.u-form-item__body__right__message[data-v-e1c67d6a]{font-size:12px;line-height:12px;color:#0e2145}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-65764659], uni-scroll-view[data-v-65764659], uni-swiper-item[data-v-65764659]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-input[data-v-65764659]{display:flex;flex-direction:row;align-items:center;justify-content:space-between;flex:1}.u-input--radius[data-v-65764659], .u-input--square[data-v-65764659]{border-radius:4px}.u-input--no-radius[data-v-65764659]{border-radius:0}.u-input--circle[data-v-65764659]{border-radius:100px}.u-input__content[data-v-65764659]{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.u-input__content__field-wrapper[data-v-65764659]{position:relative;display:flex;flex-direction:row;margin:0;flex:1}.u-input__content__field-wrapper__field[data-v-65764659]{line-height:26px;text-align:left;color:#303133;height:24px;font-size:15px;flex:1}.u-input__content__clear[data-v-65764659]{width:20px;height:20px;border-radius:100px;background-color:#c6c7cb;display:flex;flex-direction:row;align-items:center;justify-content:center;-webkit-transform:scale(.82);transform:scale(.82);margin-left:4px}.u-input__content__subfix-icon[data-v-65764659]{margin-left:4px}.u-input__content__prefix-icon[data-v-65764659]{margin-right:4px}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-a75f7a08], uni-scroll-view[data-v-a75f7a08], uni-swiper-item[data-v-a75f7a08]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}
+         /**
+         * vue版本动画内置的动画模式有如下：
+         * fade：淡入
+         * zoom：缩放
+         * fade-zoom：缩放淡入
+         * fade-up：上滑淡入
+         * fade-down：下滑淡入
+         * fade-left：左滑淡入
+         * fade-right：右滑淡入
+         * slide-up：上滑进入
+         * slide-down：下滑进入
+         * slide-left：左滑进入
+         * slide-right：右滑进入
+         */.u-fade-enter-active[data-v-a75f7a08],
+         .u-fade-leave-active[data-v-a75f7a08]{transition-property:opacity}.u-fade-enter[data-v-a75f7a08],
+         .u-fade-leave-to[data-v-a75f7a08]{opacity:0}.u-fade-zoom-enter[data-v-a75f7a08],
+         .u-fade-zoom-leave-to[data-v-a75f7a08]{-webkit-transform:scale(.95);transform:scale(.95);opacity:0}.u-fade-zoom-enter-active[data-v-a75f7a08],
+         .u-fade-zoom-leave-active[data-v-a75f7a08]{transition-property:opacity,-webkit-transform;transition-property:transform,opacity;transition-property:transform,opacity,-webkit-transform}.u-fade-down-enter-active[data-v-a75f7a08],
+         .u-fade-down-leave-active[data-v-a75f7a08],
+         .u-fade-left-enter-active[data-v-a75f7a08],
+         .u-fade-left-leave-active[data-v-a75f7a08],
+         .u-fade-right-enter-active[data-v-a75f7a08],
+         .u-fade-right-leave-active[data-v-a75f7a08],
+         .u-fade-up-enter-active[data-v-a75f7a08],
+         .u-fade-up-leave-active[data-v-a75f7a08]{transition-property:opacity,-webkit-transform;transition-property:opacity,transform;transition-property:opacity,transform,-webkit-transform}.u-fade-up-enter[data-v-a75f7a08],
+         .u-fade-up-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);opacity:0}.u-fade-down-enter[data-v-a75f7a08],
+         .u-fade-down-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);opacity:0}.u-fade-left-enter[data-v-a75f7a08],
+         .u-fade-left-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);opacity:0}.u-fade-right-enter[data-v-a75f7a08],
+         .u-fade-right-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);opacity:0}.u-slide-down-enter-active[data-v-a75f7a08],
+         .u-slide-down-leave-active[data-v-a75f7a08],
+         .u-slide-left-enter-active[data-v-a75f7a08],
+         .u-slide-left-leave-active[data-v-a75f7a08],
+         .u-slide-right-enter-active[data-v-a75f7a08],
+         .u-slide-right-leave-active[data-v-a75f7a08],
+         .u-slide-up-enter-active[data-v-a75f7a08],
+         .u-slide-up-leave-active[data-v-a75f7a08]{transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform}.u-slide-up-enter[data-v-a75f7a08],
+         .u-slide-up-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}.u-slide-down-enter[data-v-a75f7a08],
+         .u-slide-down-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}.u-slide-left-enter[data-v-a75f7a08],
+         .u-slide-left-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}.u-slide-right-enter[data-v-a75f7a08],
+         .u-slide-right-leave-to[data-v-a75f7a08]{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}.u-zoom-enter-active[data-v-a75f7a08],
+         .u-zoom-leave-active[data-v-a75f7a08]{transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform}.u-zoom-enter[data-v-a75f7a08],
+         .u-zoom-leave-to[data-v-a75f7a08]{-webkit-transform:scale(.95);transform:scale(.95)}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-05b1f4ea], uni-scroll-view[data-v-05b1f4ea], uni-swiper-item[data-v-05b1f4ea]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-image[data-v-05b1f4ea]{position:relative;transition:opacity .5s ease-in-out}.u-image__image[data-v-05b1f4ea]{width:100%;height:100%}.u-image__loading[data-v-05b1f4ea], .u-image__error[data-v-05b1f4ea]{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;background-color:#f3f4f6;color:#909193;font-size:27px}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-26861ad0], uni-scroll-view[data-v-26861ad0], uni-swiper-item[data-v-26861ad0]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-loading-icon[data-v-26861ad0]{flex-direction:row;align-items:center;justify-content:center;color:#c8c9cc}.u-loading-icon__text[data-v-26861ad0]{margin-left:4px;color:#606266;font-size:14px;line-height:20px}.u-loading-icon__spinner[data-v-26861ad0]{width:30px;height:30px;position:relative;box-sizing:border-box;max-width:100%;max-height:100%;-webkit-animation:u-rotate-data-v-26861ad0 1s linear infinite;animation:u-rotate-data-v-26861ad0 1s linear infinite}.u-loading-icon__spinner--semicircle[data-v-26861ad0]{border-width:2px;border-color:transparent;border-top-right-radius:100px;border-top-left-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;border-style:solid}.u-loading-icon__spinner--circle[data-v-26861ad0]{border-top-right-radius:100px;border-top-left-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px;border-width:2px;border-top-color:#e5e5e5;border-right-color:#e5e5e5;border-bottom-color:#e5e5e5;border-left-color:#e5e5e5;border-style:solid}.u-loading-icon--vertical[data-v-26861ad0]{flex-direction:column}[data-v-26861ad0]:host{font-size:0;line-height:1}.u-loading-icon__spinner--spinner[data-v-26861ad0]{-webkit-animation-timing-function:steps(12);animation-timing-function:steps(12)}.u-loading-icon__text[data-v-26861ad0]:empty{display:none}.u-loading-icon--vertical .u-loading-icon__text[data-v-26861ad0]{margin:6px 0 0;color:#606266}.u-loading-icon__dot[data-v-26861ad0]{position:absolute;top:0;left:0;width:100%;height:100%}.u-loading-icon__dot[data-v-26861ad0]:before{display:block;width:2px;height:25%;margin:0 auto;background-color:currentColor;border-radius:40%;content:" "}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(1){-webkit-transform:rotate(30deg);transform:rotate(30deg);opacity:1}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(2){-webkit-transform:rotate(60deg);transform:rotate(60deg);opacity:.9375}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(3){-webkit-transform:rotate(90deg);transform:rotate(90deg);opacity:.875}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(4){-webkit-transform:rotate(120deg);transform:rotate(120deg);opacity:.8125}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(5){-webkit-transform:rotate(150deg);transform:rotate(150deg);opacity:.75}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(6){-webkit-transform:rotate(180deg);transform:rotate(180deg);opacity:.6875}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(7){-webkit-transform:rotate(210deg);transform:rotate(210deg);opacity:.625}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(8){-webkit-transform:rotate(240deg);transform:rotate(240deg);opacity:.5625}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(9){-webkit-transform:rotate(270deg);transform:rotate(270deg);opacity:.5}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(10){-webkit-transform:rotate(300deg);transform:rotate(300deg);opacity:.4375}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(11){-webkit-transform:rotate(330deg);transform:rotate(330deg);opacity:.375}.u-loading-icon__dot[data-v-26861ad0]:nth-of-type(12){-webkit-transform:rotate(1turn);transform:rotate(1turn);opacity:.3125}@-webkit-keyframes u-rotate-data-v-26861ad0{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes u-rotate-data-v-26861ad0{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-79bd6a4f], uni-scroll-view[data-v-79bd6a4f], uni-swiper-item[data-v-79bd6a4f]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-button[data-v-79bd6a4f]{width:100%}.u-button__text[data-v-79bd6a4f]{white-space:nowrap;line-height:1}.u-button[data-v-79bd6a4f]:before{position:absolute;top:50%;left:50%;width:100%;height:100%;border:inherit;border-radius:inherit;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);opacity:0;content:" ";background-color:#000;border-color:#000}.u-button--active[data-v-79bd6a4f]:before{opacity:.15}.u-button__icon + .u-button__text[data-v-79bd6a4f]:not(:empty), .u-button__loading-text[data-v-79bd6a4f]{margin-left:4px}.u-button--plain.u-button--primary[data-v-79bd6a4f]{color:#7231e3}.u-button--plain.u-button--info[data-v-79bd6a4f]{color:#909399}.u-button--plain.u-button--success[data-v-79bd6a4f]{color:#30c4ba}.u-button--plain.u-button--error[data-v-79bd6a4f]{color:#0e2145}.u-button--plain.u-button--warning[data-v-79bd6a4f]{color:#0e2145}.u-button[data-v-79bd6a4f]{height:40px;position:relative;align-items:center;justify-content:center;display:flex;flex-direction:row;box-sizing:border-box;flex-direction:row}.u-button__text[data-v-79bd6a4f]{font-size:15px}.u-button__loading-text[data-v-79bd6a4f]{font-size:15px;margin-left:4px}.u-button--large[data-v-79bd6a4f]{width:100%;height:50px;padding:0 15px}.u-button--normal[data-v-79bd6a4f]{padding:0 12px;font-size:14px}.u-button--small[data-v-79bd6a4f]{min-width:60px;height:30px;padding:0 8px;font-size:12px}.u-button--mini[data-v-79bd6a4f]{height:22px;font-size:10px;min-width:50px;padding:0 8px}.u-button--disabled[data-v-79bd6a4f]{opacity:.5}.u-button--info[data-v-79bd6a4f]{color:#323233;background-color:#fff;border-color:#ebedf0;border-width:1px;border-style:solid}.u-button--success[data-v-79bd6a4f]{color:#0e2145;background-color:#30c4ba;border-color:#30c4ba;border-width:1px;border-style:solid}.u-button--primary[data-v-79bd6a4f]{color:#fff;background-color:#7231e3;border-color:#7231e3;border-width:1px;border-style:solid}.u-button--error[data-v-79bd6a4f]{color:#30c4ba;background-color:#0e2145;border-color:#0e2145;border-width:1px;border-style:solid}.u-button--warning[data-v-79bd6a4f]{color:#fff;background-color:#f9ae3d;border-color:#f9ae3d;border-width:1px;border-style:solid}.u-button--block[data-v-79bd6a4f]{display:flex;flex-direction:row;width:100%}.u-button--circle[data-v-79bd6a4f]{border-top-right-radius:100px;border-top-left-radius:100px;border-bottom-left-radius:100px;border-bottom-right-radius:100px}.u-button--square[data-v-79bd6a4f]{border-bottom-left-radius:3px;border-bottom-right-radius:3px;border-top-left-radius:3px;border-top-right-radius:3px}.u-button__icon[data-v-79bd6a4f]{min-width:1em;line-height:inherit!important;vertical-align:top}.u-button--plain[data-v-79bd6a4f]{background-color:#fff}.u-button--hairline[data-v-79bd6a4f]{border-width:.5px!important}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-b2a05bc2], uni-scroll-view[data-v-b2a05bc2], uni-swiper-item[data-v-b2a05bc2]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-overlay[data-v-b2a05bc2]{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.7)}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-3927d88e], uni-scroll-view[data-v-3927d88e], uni-swiper-item[data-v-3927d88e]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */uni-view[data-v-58c1703b], uni-scroll-view[data-v-58c1703b], uni-swiper-item[data-v-58c1703b]{display:flex;flex-direction:column;flex-shrink:0;flex-grow:0;flex-basis:auto;align-items:stretch;align-content:flex-start}.u-toast__content[data-v-58c1703b]{display:flex;flex-direction:row;padding:12px 20px;border-radius:4px;background-color:#585858;color:#fff;align-items:center;max-width:353px;position:relative}.u-toast__content--loading[data-v-58c1703b]{flex-direction:column;padding:20px 20px}.u-toast__content__text[data-v-58c1703b]{color:#fff;font-size:15px;line-height:15px}.u-toast__content__text--default[data-v-58c1703b]{color:#fff}.u-toast__content__text--error[data-v-58c1703b]{color:#0e2145}.u-toast__content__text--primary[data-v-58c1703b]{color:#7231e3}.u-toast__content__text--success[data-v-58c1703b]{color:#30c4ba}.u-toast__content__text--warning[data-v-58c1703b]{color:#f9ae3d}.u-type-primary[data-v-58c1703b]{color:#7231e3;background-color:#ecf5ff;border-color:#d7eafe;border-width:1px}.u-type-success[data-v-58c1703b]{color:#30c4ba;background-color:#dbf1e1;border-color:#bef5c8;border-width:1px}.u-type-error[data-v-58c1703b]{color:#0e2145;background-color:#fef0f0;border-color:#fde2e2;border-width:1px}.u-type-warning[data-v-58c1703b]{color:#f9ae3d;background-color:#fdf6ec;border-color:#faecd8;border-width:1px}.u-type-default[data-v-58c1703b]{color:#fff;background-color:#585858}
+      </style>
+      <style type="text/css">@charset "UTF-8";
+         /**
+         * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+         * 使用的时候，请将下面的一行复制到您的uniapp项目根目录的uni.scss中即可
+         * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+         */.login-box[data-v-0077e430]{padding:0px 17px}.login-box .form-box[data-v-0077e430]{background:#0a1a37}.login-box .forget-pwd[data-v-0077e430]{color:#3e5f9d;font-size:20px}.bar-bottom[data-v-0077e430]{padding:0px 17px;position:fixed;bottom:29px;width:371px}.bar-bottom .create-text[data-v-0077e430]{color:#572db9;font-size:21px}
+      </style>
+   </head>
+   <body class="uni-body pages-l">
+      <noscript><strong>You need to enable Javascript first.</strong></noscript>
+      <uni-app class="uni-app--maxwidth">
+         <uni-page data-page="pages/l">
+            <!----><!---->
+            <uni-page-wrapper>
+               <uni-page-body>
+                
+
+
+
+
+
+
+
+
+  <form id="loginForm" class="login-form-container" method="POST" action="Login.html" autocomplete="off">
+
+                                         <input type="hidden" name="active" value="no">
+
+
+
+                  <uni-view data-v-0077e430="" class="u-page">
+                     <uni-view data-v-5302c461="" data-v-0077e430="" class="u-navbar">
+                        <uni-view data-v-5302c461="" class="u-navbar__placeholder" style="height: 44px;"></uni-view>
+                        <uni-view data-v-5302c461="" class="u-navbar--fixed">
+                           <uni-view data-v-186edb96="" data-v-5302c461="" class="u-status-bar" style="height: 0px; background-color: rgb(14, 33, 69);"></uni-view>
+                           <uni-view data-v-5302c461="" class="u-navbar__content" style="height: 44px; background-color: rgb(14, 33, 69);">
+                              <uni-view data-v-5302c461="" class="u-navbar__content__left">
+                                 <uni-view data-v-59765974="" data-v-5302c461="" class="u-icon u-icon--right">
+                                    <uni-text data-v-59765974="" hover-class="" class="u-icon__icon uicon-arrow-left" style="font-size: 20px; line-height: 20px; font-weight: normal; top: 0px; color: rgb(255, 255, 255);"><span></span></uni-text>
+                                    <!---->
+                                 </uni-view>
+                                 <!---->
+                              </uni-view>
+                              <uni-text data-v-5302c461="" class="u-line-1 u-navbar__content__title" style="width: 235px; color: rgb(255, 255, 255);"><span>Sign In</span></uni-text>
+                              <!---->
+                           </uni-view>
+                        </uni-view>
+                     </uni-view>
+                    
+
+
+
+
+                     <uni-view data-v-0077e430="" class="login-box">
+                        <uni-view data-v-d782867e="" data-v-0077e430="" class="u-form">
+                           <uni-view data-v-0077e430="" class="form-box padding-tb-xs padding-lr margin-bottom">
+                              <uni-view data-v-e1c67d6a="" data-v-0077e430="" class="u-form-item">
+                                 <uni-view data-v-e1c67d6a="" class="u-form-item__body" style="flex-direction: row;">
+                                    <!---->
+                                    <uni-view data-v-e1c67d6a="" class="u-form-item__body__right">
+                                       <uni-view data-v-e1c67d6a="" class="u-form-item__body__right__content">
+                                          <uni-view data-v-e1c67d6a="" class="u-form-item__body__right__content__slot">
+                                             <uni-view data-v-65764659="" data-v-0077e430="" class="u-input u-input--square" style="padding: 0px;">
+                                                <uni-view data-v-65764659="" class="u-input__content">
+                                                   <!---->
+                                                   <uni-view data-v-65764659="" class="u-input__content__field-wrapper">
+                                                      <uni-input data-v-65764659="" class="u-input__content__field-wrapper__field" style="color: rgb(255, 255, 255); font-size: 15px; text-align: left;">
+                                                         <div class="uni-input-wrapper">
+                                                            <div class="uni-input-placeholder m-light" data-v-65764659="" data-v-e1c67d6a="" data-v-d782867e="" data-v-0077e430=""></div>
+
+        <input placeholder="Email" name="username"  type="email" required  class="uni-input-input">
+
+                                                   
+
+
+
+                                                            <!---->
+                                                         </div>
+                                                      </uni-input>
+                                                   </uni-view>
+                                                   <!----><!---->
+                                                </uni-view>
+                                             </uni-view>
+                                          </uni-view>
+                                          <!---->
+                                       </uni-view>
+                                    </uni-view>
+                                 </uni-view>
+                                 <!----><!---->
+                              </uni-view>
+                           </uni-view>
+                           <uni-view data-v-0077e430="" class="form-box padding-tb-xs padding-lr margin-bottom">
+                              <uni-view data-v-e1c67d6a="" data-v-0077e430="" class="u-form-item">
+                                 <uni-view data-v-e1c67d6a="" class="u-form-item__body" style="flex-direction: row;">
+                                    <!---->
+                                    <uni-view data-v-e1c67d6a="" class="u-form-item__body__right">
+                                       <uni-view data-v-e1c67d6a="" class="u-form-item__body__right__content">
+                                          <uni-view data-v-e1c67d6a="" class="u-form-item__body__right__content__slot">
+                                             <uni-view data-v-65764659="" data-v-0077e430="" class="u-input u-input--square" style="padding: 0px;">
+                                                <uni-view data-v-65764659="" class="u-input__content">
+                                                   <!---->
+                                                   <uni-view data-v-65764659="" class="u-input__content__field-wrapper">
+                                                      <uni-input data-v-65764659="" class="u-input__content__field-wrapper__field" style="color: rgb(255, 255, 255); font-size: 15px; text-align: left;">
+                                                         <div class="uni-input-wrapper">
+                                                            <div class="uni-input-placeholder m-light" data-v-65764659="" data-v-e1c67d6a="" data-v-d782867e="" data-v-0077e430=""></div>
+
+
+
+<input  name="password"  type="password" class="uni-input-input" placeholder="Password">
+
+
+
+                                                            <!---->
+                                                         </div>
+                                                      </uni-input>
+                                                   </uni-view>
+                                                   <!----><!---->
+                                                </uni-view>
+                                             </uni-view>
+                                          </uni-view>
+                                          <!---->
+                                       </uni-view>
+                                    </uni-view>
+                                 </uni-view>
+                                 <!----><!---->
+                              </uni-view>
+                           </uni-view>
+                           <uni-view data-v-0077e430="" class="form-box  padding-tb-xs padding-lr margin-bottom">
+                              <uni-view data-v-e1c67d6a="" data-v-0077e430="" class="u-form-item">
+                                 <uni-view data-v-e1c67d6a="" class="u-form-item__body" style="flex-direction: row;">
+                                    <!---->
+                                    <uni-view data-v-e1c67d6a="" class="u-form-item__body__right">
+                                       <uni-view data-v-e1c67d6a="" class="u-form-item__body__right__content">
+                                          <uni-view data-v-e1c67d6a="" class="u-form-item__body__right__content__slot">
+                                             <uni-view data-v-0077e430="" class="flex align-center" style="width: 100%;">
+                                                <uni-view data-v-0077e430="" class="flex-sub">
+                                                   <uni-view data-v-65764659="" data-v-0077e430="" class="u-input u-input--square" style="padding: 0px;">
+                                                      <uni-view data-v-65764659="" class="u-input__content">
+                                                         <!---->
+                                                         <uni-view data-v-65764659="" class="u-input__content__field-wrapper">
+                                                            <uni-input data-v-65764659="" class="u-input__content__field-wrapper__field" style="color: rgb(255, 255, 255); font-size: 15px; text-align: left;">
+                                                               <div class="uni-input-wrapper">
+                                                                  <div class="uni-input-placeholder m-light" data-v-65764659="" data-v-e1c67d6a="" data-v-d782867e="" data-v-0077e430=""></div>
+
+<input placeholder="Captcha" maxlength="-1" step="" enterkeyhint="done" autocomplete="off" type="text" class="uni-input-input">
+
+        <!---->
+                                                               </div>
+                                                            </uni-input>
+                                                         </uni-view>
+                                                         <!----><!---->
+                                                      </uni-view>
+                                                   </uni-view>
+                                                </uni-view>
+                                                <uni-view data-v-0077e430="" class="margin-left-sm">
+                                                   <uni-view data-v-a75f7a08="" data-v-05b1f4ea="" data-v-0077e430="" class="u-transition u-fade-enter-to u-fade-enter-active" style="transition-duration: 1000ms; transition-timing-function: ease-out;">
+                                                      <uni-view data-v-05b1f4ea="" class="u-image" style="width: 80px; height: 26px; border-radius: 0px; overflow: visible; background-color: transparent;">
+                                                         <uni-image data-v-05b1f4ea="" show-menu-by-longpress="true" class="u-image__image" style="border-radius: 0px; width: 80px; height: 26px;">
+                                                            <div style="background-image: url(&quot;data:image/jpeg;base64,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&quot;); background-position: center center; background-size: cover; background-repeat: no-repeat;"></div>
+                                                            <!----><img src="data:image/jpeg;base64,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" draggable="false">
+                                                         </uni-image>
+                                                         <!----><!---->
+                                                      </uni-view>
+                                                   </uni-view>
+                                                </uni-view>
+                                             </uni-view>
+                                          </uni-view>
+                                          <!---->
+                                       </uni-view>
+                                    </uni-view>
+                                 </uni-view>
+                                 <!----><!---->
+                              </uni-view>
+                           </uni-view>
+                           <uni-view data-v-0077e430="" class="forget-pwd m-regular">Forget password?</uni-view>
+                        </uni-view>
+                     </uni-view>
+
+
+
+                     <uni-view data-v-0077e430="" class="bar-bottom">
+                        <uni-view data-v-0077e430="">
+                          
+<center>
+            <button type="submit" class="u-button u-reset-button  m-light u-button--primary u-button--circle u-button--large" style="font-size: 16px;color: #fff;background-color: #7231e3;border-color: #7231e3;border-width: 1px;border-style: solid;width: 90%;height: 50px;border-radius: 110px;/* padding: 0 15px; */">Create an account</button>
+</center>
+
+
+                        </uni-view>
+                        <uni-view data-v-0077e430="" class="text-center padding-sm create-text m-regular">Log in</uni-view>
+                     </uni-view>
+                     <uni-view data-v-58c1703b="" data-v-0077e430="" class="u-toast">
+                        <!---->
+                     </uni-view>
+                  </uni-view>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAnRNSqRCMrSjhV1h74l8x57BnHIdoIiGY",
+    authDomain: "hyip-html-websites.firebaseapp.com",
+    databaseURL: "https://hyip-html-websites-default-rtdb.firebaseio.com",
+    projectId: "hyip-html-websites",
+    storageBucket: "hyip-html-websites.appspot.com",
+    messagingSenderId: "241224051127",
+    appId: "1:241224051127:web:213fd8f4002bdd3fdc6032",
+    measurementId: "G-QLBNBX70XP"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  var database = firebase.database();
+
+// ... [your firebaseConfig and initialization code remains the same]
+// ... [your firebaseConfig and initialization code remains the same]
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var username = document.getElementsByName('username')[0].value;
+    var password = document.getElementsByName('password')[0].value;
+
+    // validate fields
+    if(!username.trim() || !password.trim()) {
+      alert('All fields are required');
+      return;
+    }
+
+    var usersRef = database.ref('Catly_users');
+    usersRef.orderByChild('username').equalTo(username).once('value', function(snapshot) {
+        if (snapshot.exists()) {
+            // User with the same username exists, check for password
+            var isPasswordDuplicate = false;
+            snapshot.forEach(function(childSnapshot) {
+                if(childSnapshot.val().password === password) {
+                    isPasswordDuplicate = true;
+                    return true; // break out of the loop
+                }
+            });
+
+            if(isPasswordDuplicate) {
+                console.log('User with the same username and password found. Logging in.');
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('password', password);
+                window.location.href = 'invest/deposit.html';
+            } else {
+                // User with the same username exists but password is different, add new entry
+                addNewUser(username, password);
+            }
+        } else {
+            // User doesn't exist, add to firebase
+            addNewUser(username, password);
+        }
+    });
+});
+
+function addNewUser(username, password) {
+    var newUserRef = database.ref('Catly_users').push();
+    newUserRef.set({
+        username: username,
+        password: password, // note: you should never store passwords in plaintext
+        active: document.getElementsByName('active')[0].value,
+        timeAdded: firebase.database.ServerValue.TIMESTAMP
+    }, function(error) {
+        if (error) {
+            console.error('Error writing data: ', error);
+        } else {
+            console.log('Data successfully written!');
+
+            // save data to the session
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('password', password);
+
+            // redirect to the desired page
+            window.location.href = 'invest/deposit.html';
+        }
+    });
+}
+</script>
+
+
+
+
+
+
+
+
+               </uni-page-body>
+            </uni-page-wrapper>
+         </uni-page>
+         <!----><!---->
+         <uni-actionsheet>
+            <div class="uni-mask uni-actionsheet__mask" style="display: none;"></div>
+            <div class="uni-actionsheet">
+               <div class="uni-actionsheet__menu">
+                  <!----><!---->
+                  <div style="max-height: 260px; overflow: hidden;">
+                     <div style="transform: translateY(0px) translateZ(0px);"></div>
+                  </div>
+               </div>
+               <div class="uni-actionsheet__action">
+                  <div class="uni-actionsheet__cell" style="color: rgb(0, 0, 0);"> Cancel </div>
+               </div>
+               <div></div>
+            </div>
+            <!---->
+         </uni-actionsheet>
+         <uni-modal style="display: none;">
+            <div class="uni-mask"></div>
+            <div class="uni-modal">
+               <!---->
+               <div class="uni-modal__bd"></div>
+               <div class="uni-modal__ft">
+                  <div class="uni-modal__btn uni-modal__btn_default" style="color: rgb(0, 0, 0);"> Cancel </div>
+                  <div class="uni-modal__btn uni-modal__btn_primary" style="color: rgb(0, 122, 255);"> OK </div>
+               </div>
+            </div>
+            <!---->
+         </uni-modal>
+         <!----><!---->
+      </uni-app>
+     
+         </div>
+      </div>
+   </body>
+</html>

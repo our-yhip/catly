@@ -1,0 +1,87 @@
+<form action="https://user.coingpt.farm/user/deposit/insert" method="post">
+                <input type="hidden" name="_token" value="81ZtLTdIIbR1TitupdrFQ8ZFKR7LRH0BVybeIsN2">                <div class="row gy-4">
+                    <input name="method_code" type="hidden">
+                    <input name="currency" type="hidden">
+                                            <input name="order" type="hidden" value="14433">
+
+                        <div class="form-group">
+                            <label class="form-label">Plan Title</label>
+                            <div class="input-group">
+                                <input class="form--control" type="text" value="STARTER" autocomplete="off" readonly="">
+                            </div>
+                        </div>
+                                        <div class="form-group">
+                        <label class="form-label required">Select Gateway</label>
+                        <select id="gateway" class="custom--select form--control" name="gateway" required="">
+    <option value="">Select One</option>
+    <option value="credit-card">Credit Card</option>
+    <option value="BTC">Bitcoin (BTC)</option>
+    <option value="USDT">Tether TRC20 (USDT)</option>
+    <option value="USDT">Tether BEP20 (USDT)</option>
+    <option value="USDT">Tether ERC20 (USDT)</option>
+    <option value="TRX">Tron (TRX)</option>
+    <option value="DOGE">Dogecoin (DOGE)</option>
+    <option value="ETH">Ethereum (ETH)</option>
+    <option value="DASH">Dash (DASH)</option>
+    <option value="LTC">Litecoin (LTC)</option>
+    <option value="XMR">Monero (XMR)</option>
+</select>
+                        <small class="text--danger d-none limit-error mt-2"></small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Pay From Balance(10.00000000)+Direct Payment </label>
+                        <div class="input-group">
+                            <input class="form-control form--control" name="amount" type="number" value="2" step="any" autocomplete="off" required="" readonly="">
+                            <span class="input-group-text append-icon--btn">USD</span>
+                        </div>
+                    </div>
+                    <div class="preview-details d-none">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Limit</span>
+                                <span><span class="min fw-bold">0</span> USD - <span class="max fw-bold">0</span> USD</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Charge</span>
+                                <span><span class="charge fw-bold">0</span> USD</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Payable</span> <span><span class="payable fw-bold"> 0</span> USD</span>
+                            </li>
+                           
+                           
+                           
+                           
+                           
+                            <li class="list-group-item justify-content-center crypto_currency d-none">
+                                <span>Conversion with <span class="method_currency"></span> and final value will Show on next step</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group"><button class="btn--base w-100" type="submit">Submit</button></div>
+                </div>   <span style="color:#ffffff;"> <br><strong>If you do not have cyptocurrency to pay . You can buy bitcoin on Binance with your bank account <span style="color:#3300ff;"> <a href="https://www.binance.com/en/how-to-buy/bitcoin" target="_blank">Click here</a></span></strong>
+            
+        </span></form>
+        
+
+
+<script>
+window.onload = function() {
+    var urlParams = new URLSearchParams(window.location.search);
+
+    var planTitle = urlParams.get('planTitle');
+    var planPrice = urlParams.get('planPrice');
+    var paymentMethod = urlParams.get('paymentMethod');
+
+    document.querySelector('.form--control').value = decodeURIComponent(planTitle);
+    document.querySelector('.form-control').value = decodeURIComponent(planPrice);
+    document.querySelector('#gateway').value = decodeURIComponent(paymentMethod);
+};
+
+
+</script>
+
+
+
+

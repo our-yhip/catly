@@ -1,0 +1,45 @@
+<div class="dashboard-body">
+    <div class="card custom--card card-deposit">
+        <div class="card-header">
+            <h5 class="card-title">Payment Preview</h5>
+        </div>
+        <div class="card-body card-body-deposit text-center">
+            <h4 class="my-2"> PLEASE SEND EXACTLY <span id="amount" class="text-success"></span> <span id="gateway"></span></h4>
+            <h5 class="mb-2 copyBoard">TO </h5>
+            <div class="input-group" style="margin-bottom: 10px;">
+                <input id="address" class="form-control form--control referralURL" name="text" type="text" value="327WWpDJKgZtgoB24GDS3GeWSRyNEkGzmS" readonly="">
+                <button class="input-group-text copytext copyBoard" id="copyBoard"> <i class="fa fa-copy"></i> </button>
+            </div>
+            <img id="qr-code" src="" alt="Image">
+            <h4 class="bold mt-4 text-white">SCAN TO SEND</h4>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+var gatewayValue = localStorage.getItem('gatewayValue');
+var amount = localStorage.getItem('amount');
+var walletAddress = localStorage.getItem('walletAddress');
+var coingeckoID = localStorage.getItem('coingeckoID');
+
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=' + coingeckoID + '&vs_currencies=usd')
+    .then(response => response.json())
+    .then(data => {
+        var exchangeRate = data[coingeckoID].usd;
+        var amountInGateway = amount / exchangeRate;
+
+        document.getElementById('gateway').textContent = gatewayValue;
+        document.getElementById('amount').textContent = amountInGateway.toFixed(8);
+        document.getElementById('address').value = walletAddress;
+
+        // Generate a QR code for the address and amount
+        var qrCodeURL = 'https://api.qrserver.com/v1/create-qr-code/?color=327bff&data=' + encodeURIComponent(walletAddress + ' ' + amountInGateway.toFixed(8));
+        document.getElementById('qr-code').src = qrCodeURL;
+    });
+</script>
+
+
+
+

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" itemscope="" itemtype="http://schema.org/WebPage" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> CoinGPT - Plans</title>
+
+    <meta name="title" content="CoinGPT - Plans">
+    <meta name="description" content="No need to learn any professional knowledge, everything is automatically handled by the highly intelligent CoinGPT.">
+    <meta name="keywords" content="coingpt">
+    <link type="image/x-icon" href="https://user.coingpt.farm/assets/images/logoIcon/favicon.png" rel="shortcut icon">
+
+    
+    <link href="./investt_files/logo(1).png" rel="apple-touch-icon">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CoinGPT - Plans">
+    
+    <meta itemprop="name" content="CoinGPT - Plans">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://user.coingpt.farm/assets/images/seo/63ba4a645639b1673153124.jpeg">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CoinGPT">
+    <meta property="og:description" content="No need to learn any professional knowledge, everything is automatically handled by the highly intelligent CoinGPT.">
+    <meta property="og:image" content="https://user.coingpt.farm/assets/images/seo/63ba4a645639b1673153124.jpeg">
+    <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1180">
+    <meta property="og:image:height" content="600">
+    <meta property="og:url" content="plans.html">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="./investt_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./investt_files/all.min.css" rel="stylesheet">
+    <link href="./investt_files/slick.css" rel="stylesheet">
+    <link href="./investt_files/line-awesome.min.css" rel="stylesheet">
+    <link href="./investt_files/style.css" rel="stylesheet">
+    <link href="./investt_files/custom.css" rel="stylesheet">
+    <link type="text/css" href="./investt_files/color.php" rel="stylesheet">
+             <style>
+         .modal-content {
+             text-align: unset !important;
+         }
+
+         .custom--modal .list-group-item:last-child {
+             border-bottom: 1px solid #ffffff19;
+         }
+
+         .vvvv {
+    display: none !important;
+}
+
+     </style>
+ <link type="text/css" rel="stylesheet" charset="UTF-8" href="./investt_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./investt_files/m=el_main"></script></head>
+
+<body style="position: relative; min-height: 100%; top: 0px;">
+        <div class="preloader" style="display: none;">
+        <div class="loader-p"></div>
+    </div>
+    <div class="sidebar-overlay"></div>
+       
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+<div class="dashboard py-100 section-bg">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-xl-9 col-lg-8">
+                 
+
+
+
+
+
+
+
+
+
+                    <div class="dashboard-body">
+                            <div class="card custom--card card-deposit">
+        <div class="card-header">
+            <h5 class="card-title">Payment Preview</h5>
+        </div>
+        <div class="card-body card-body-deposit text-center">
+                       <h4 class="my-2"> PLEASE SEND EXACTLY <span id="amount" class="text-success"></span> <span id="gateway"></span></h4>
+
+            <h5 class="mb-2 copyBoard">TO </h5>
+               <div class="input-group" style="margin-bottom: 10px;">
+                  
+                   <input id="address" class="form-control form--control referralURL" name="text" type="text" value="" readonly="">
+
+                    <button class="input-group-text copytext copyBoard" id="copyBoard"> <i class="fa fa-copy"></i> </button>
+                </div>
+ 
+
+<img id="qr-code" src="" alt="Image">
+
+            <h4 class="bold mt-4 text-white">SCAN TO SEND</h4>
+        </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+        
+    <a class="scroll-top"><i class="fas fa-angle-double-up"></i></a>
+
+    <script src="./investt_files/jquery-3.6.0.min.js"></script>
+    <script src="./investt_files/bootstrap.bundle.min.js"></script>
+    <script src="./investt_files/slick.min.js"></script>
+    <script src="./investt_files/chart.js"></script>
+    <script src="./investt_files/main.js"></script>
+
+    
+    <link href="./investt_files/iziToast.min.css" rel="stylesheet">
+<script src="./investt_files/iziToast.min.js"></script>
+
+
+
+
+<script>
+var gatewayValue = localStorage.getItem('gatewayValue');
+var amount = localStorage.getItem('amount');
+var walletAddress = localStorage.getItem('walletAddress');
+var coingeckoID = localStorage.getItem('coingeckoID');
+
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=' + coingeckoID + '&vs_currencies=usd')
+    .then(response => response.json())
+    .then(data => {
+        var exchangeRate = data[coingeckoID].usd;
+        var amountInGateway = amount / exchangeRate;
+
+        document.getElementById('gateway').textContent = gatewayValue;
+        document.getElementById('amount').textContent = amountInGateway.toFixed(8);
+        document.getElementById('address').value = walletAddress;
+
+        // Generate a QR code for the address and amount
+        var qrCodeURL = 'https://api.qrserver.com/v1/create-qr-code/?color=000000&data=' + encodeURIComponent(walletAddress + ' ' + amountInGateway.toFixed(8));
+        document.getElementById('qr-code').src = qrCodeURL;
+    });
+</script>
+
+
+
+<script>
+    "use strict";
+
+    function notify(status, message) {
+        iziToast[status]({
+            message: message,
+            position: "topRight"
+        });
+    }
+</script>
+
+    
+        <script src="https://user.coingpt.farm/assets/global/js/jquery.treeView.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            $('.treeview').treeView();
+            $('.copyBoard').click(function() {
+                var copyText = document.getElementsByClassName("referralURL");
+                copyText = copyText[0];
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+
+                /*For mobile devices*/
+                document.execCommand("copy");
+                notify('success', "Copied: " + copyText.value);
+            });
+        })(jQuery);
+    </script>
+
+    <script>
+        'use strict';
+        (function($) {
+            $(document).on("change", ".select-bar", function() {
+                window.location.href = "https://user.coingpt.farm/change/" + $(this).val();
+            });
+
+            $('.select-bar').val('en');
+        })(jQuery)
+    </script>
+
+
+
+
+
+
+<script>
+    "use strict";
+
+    function notify(status, message) {
+        iziToast[status]({
+            message: message,
+            position: "topRight"
+        });
+    }
+</script>
+
+    
+    <script>
+'use strict';
+(function($){
+      var myModalEl = document.getElementById('planalertModal')
+      var myModal = new bootstrap.Modal(myModalEl, {
+  keyboard: false
+})
+
+    $("#apikeybox").on("click",function(){
+       myModal.show();
+    })
+      $("#submitapi").on("click",function(){
+        location.href="https://user.coingpt.farm/user/api-manage";
+    })
+    
+   
+setInterval(timer,5000);
+function timer(){
+ var timestamp = (new Date()).valueOf();
+$.ajax({
+        type: "GET",
+        url:"/dayto?rand="+timestamp,
+        dataType:"json",
+        beforeSend: function() {
+    
+        },
+success: function(A) {
+if(A.status>0){
+$(".nowtime").html(A.time);
+   
+
+
+}
+}
+});
+}
+})(jQuery);
+</script>
+
+    <script>
+        'use strict';
+
+
+
+        $(function () {
+            var listPanel = $('#deposits ul');
+            var nubcers = 0;
+            function up() {
+                listPanel.animate({
+                    'top': (nubcers - 35) + 'px'
+                }, 1500, 'linear', function () {
+                    listPanel.css({'top': '0px'})
+                    .find("li:first").appendTo(listPanel);
+                    up();
+                    });
+            }
+           up();
+            });
+        $(function () {
+            var listPanel = $('#withdraws ul');
+            var nubcers = 0;
+            function up() {
+                listPanel.animate({
+                    'top': (nubcers - 35) + 'px'
+                }, 1500, 'linear', function () {
+                    listPanel.css({'top': '0px'})
+                    .find("li:first").appendTo(listPanel);
+                    up();
+                    });
+            }
+            up();
+            });
+
+    </script>
+    <script>
+        (function($) {
+            $('.policy').on('click', function() {
+                $.get('https://user.coingpt.farm/cookie/accept', function(response) {
+                    $('.cookies-card').addClass('d-none');
+                });
+            });
+            setTimeout(function() {
+                $('.cookies-card').removeClass('hide')
+            }, 2000);
+        })(jQuery)
+    </script>
+     <script>
+         'use strict';
+         (function($) {
+             $(document).on('click', '.lock', function() {
+                 $(this).attr("disabled", true);
+                 $('form').submit();
+             });  
+             $(document).on('click', '.buy-plan', function() {
+                 var modal = $('#buyPlanModal');
+                 var balance=10.00000000;
+                  $("#iframe").html('<iframe src="'+$(this).data('url')+'" width="100%" height="100%" frameborder="0" style="border: 0; overflow: hidden; min-height: 400px; min-width: 300px;"></iframe>');
+                 var price=parseFloat($(this).data('price'));
+                  let selectedValues = '';
+                  selectedValues +="<option value=\"\" selected disabled>Select One</option>";
+                 if(balance>=price){
+                  selectedValues += `<option value="1" selected>From Balance</option>`;   
+                     
+                 }else{
+                     
+                  selectedValues += `<option value="2" selected>From Balance+Direct Payment</option>`;     
+                     
+                 }
+               
+
+                    
+               
+
+                modal.find('select[name="payment_method"]').html(selectedValues);
+                
+                 
+                 modal.find('input[name=plan_id]').val($(this).data('id'));
+                 modal.find('.plan-title').text($(this).data('title'));
+                 modal.find('.plan-price').text($(this).data('price'));
+                 
+                 modal.modal('show');
+             });
+         })(jQuery);
+     </script>
+ 
+    <script>
+        'use strict';
+        (function($) {
+            $(document).on("change", ".select-bar", function() {
+                window.location.href = "https://user.coingpt.farm/change/" + $(this).val();
+            });
+
+            $('.select-bar').val('en');
+        })(jQuery)
+    </script>
+
+
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
